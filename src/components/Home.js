@@ -72,20 +72,20 @@ export const Home = () => {
 
         } else {
             setViewport({
-                latitude: dataIP.lat,
-                longitude: dataIP.lon,
+                latitude: dataIP.latitude,
+                longitude: dataIP.longitude,
                 width: '100vw',
                 height: '100vh',
                 zoom: 15
             });
             
             setMarkerLocation({
-                latitude: dataIP.lat,
-                longitude: dataIP.lon,
-                country: dataIP.country,
-                region: dataIP.region,
+                latitude: dataIP.latitude,
+                longitude: dataIP.longitude,
+                country: dataIP.country_name,
+                region: dataIP.region_name,
                 city: dataIP.city,
-                ip: dataIP.query
+                ip: dataIP.ip
             });
         }
     };
@@ -104,20 +104,20 @@ export const Home = () => {
         }
 
         setViewport({
-            latitude: dataIP.lat,
-            longitude: dataIP.lon,
+            latitude: dataIP.latitude,
+            longitude: dataIP.longitude,
             width: '100vw',
             height: '100vh',
             zoom: 15
         });
 
         setMarkerLocation({
-            latitude: dataIP.lat,
-            longitude: dataIP.lon,
-            country: dataIP.country,
-            region: dataIP.region,
+            latitude: dataIP.latitude,
+            longitude: dataIP.longitude,
+            country: dataIP.country_name,
+            region: dataIP.region_name,
             city: dataIP.city,
-            ip: dataIP.query
+            ip: dataIP.ip
         });
     }
 

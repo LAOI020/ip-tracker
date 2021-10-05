@@ -3,6 +3,7 @@ import { Provider, useDispatch } from 'react-redux';
 import { store } from './store';
 import { Home } from './components/Home';
 import { actionResizeWindow } from './actions/appActions';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 export const App = () => {

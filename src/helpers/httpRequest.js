@@ -3,10 +3,15 @@ export const httpGetMyIP = async () => {
     
     let result;
     
-    await fetch('http://ip-api.com/json').then(async response =>{
+    await fetch('https://freegeoip.app/json/').then(async response =>{
         const data = await response.json();
 
-        result = data;
+        const objectResult = {
+            ...data,
+            status: 'success'
+        }
+
+        result = objectResult;
     });
 
     return result;
@@ -17,12 +22,20 @@ export const httpSearchIP = async (ipAdress) => {
 
     let result;
     
-    await fetch(`http://ip-api.com/json/${ipAdress}`)
+    await fetch(`https://freegeoip.app/json/${ipAdress}`)
         .then(async response =>{
             const data = await response.json();
 
-            result = data;
-        });
+            const objectResult = {
+                ...data,
+                status: 'success'
+            }
+
+            result = objectResult;
+            
+        }).catch(err => {
+            result = { status: 'error'}
+        })
 
     return result;
 }
